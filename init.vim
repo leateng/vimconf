@@ -49,9 +49,12 @@ Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-surround'
 Plug 'preservim/tagbar'
 
-" vue
-Plug 'posva/vim-vue'
+" frontend
+" Plug 'posva/vim-vue'
+Plug 'ap/vim-css-color'
 
+Plug 'voldikss/vim-floaterm'
+Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 call plug#end()
@@ -195,7 +198,8 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ 'coc-html',
             \ 'coc-css',
-            \ 'coc-json']
+            \ 'coc-json',
+            \ 'coc-snippets']
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -203,7 +207,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 " map <C-]> :call CocActionAsync('jumpDefinition')<CR>
-nmap <F12> :call coc#config("diagnostic.virtualText", "true")<CR>
+" nmap <F12> :call coc#config("diagnostic.virtualText", "true")<CR>
 function! s:show_documentation()
   if &filetype == 'vim'
     execute 'h '.expand('<cword>')
@@ -240,3 +244,9 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" floaterm
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_width=1.0
+let g:floaterm_height=1.0
+let g:floaterm_position='top'
