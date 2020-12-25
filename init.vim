@@ -223,8 +223,8 @@ let g:airline_theme='base16_google'
 let g:airline_powerline_fonts = 1   
 let g:airline#extensions#coc#enabled = 1
 "设置切换Buffer快捷键"
-nnoremap <C-right> :bn<CR>
-nnoremap <C-left> :bp<CR>
+nnoremap <S-C-right> :bn<CR>
+nnoremap <S-C-left> :bp<CR>
 
 """"""""""" snippet """""""""""
 " Use <C-l> for trigger snippet expand.
